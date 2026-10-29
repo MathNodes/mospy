@@ -38,14 +38,14 @@ class TestGRPCClientClass:
         tx = Transaction(
             account=account,
             fee=fee,
-            gas=10000000000,
+            gas=100000,
             memo="This is a mospy test transaction"
         )
 
         tx.add_msg(
             tx_type="transfer",
             sender=account,
-            receipient=account.address,
+            recipient=account.address,
             amount=1000,
             denom="uatom",
         )
